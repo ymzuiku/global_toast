@@ -123,7 +123,7 @@ class Toast {
               padding: EdgeInsets.symmetric(horizontal: 40.0),
               child: AnimatedOpacity(
                 opacity: _showing ? 1.0 : 0.0, //目标透明度
-                duration: _showing ? Duration(milliseconds: 100) : Duration(milliseconds: 400),
+                duration: _showing ? Duration(milliseconds: 100) : Duration(milliseconds: _showTime),
                 child: _buildToastWidget(),
               ),
             ),
@@ -142,7 +142,7 @@ class Toast {
     if (DateTime.now().difference(_startedTime).inMilliseconds >= _showTime) {
       _showing = false;
       _overlayEntry.markNeedsBuild();
-      await Future.delayed(Duration(milliseconds: 400));
+      await Future.delayed(Duration(milliseconds: _showTime));
       _overlayEntry.remove();
       _overlayEntry = null;
     }

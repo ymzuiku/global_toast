@@ -1,8 +1,8 @@
-name: temp_components
+name: global_toast
 description: global_toast can create toast at everyware
-version: 1.0.0
+version: 1.0.1
 author: pillar<ymzuiku@gmail.com>
-homepage: https://github.com/ymzuiku/temp_components
+homepage: https://github.com/ymzuiku/global_toast
 
 # touch CHANGELOG.md
 # touch pubspec.yaml
