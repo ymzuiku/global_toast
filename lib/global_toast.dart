@@ -138,11 +138,9 @@ class Toast {
     }
     // 等待时间
     await Future.delayed(Duration(milliseconds: _showTime));
-    //2秒后 到底消失不消失
-    if (DateTime.now().difference(_startedTime).inMilliseconds >= _showTime) {
-      _showing = false;
-      _overlayEntry.markNeedsBuild();
-      await Future.delayed(Duration(milliseconds: _showTime));
+    //2秒后消失
+    _showing = false;
+    if (_overlayEntry != null) {
       _overlayEntry.remove();
       _overlayEntry = null;
     }
