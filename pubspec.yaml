@@ -1,6 +1,6 @@
 name: global_toast
-description: global_toast can create toast at everyware
-version: 1.0.4
+description: global_toast can create toast at everyware, In first Page set Totas.globalContext = context, more info please read readme or example.
+version: 2.0.0
 author: pillar<ymzuiku@gmail.com>
 homepage: https://github.com/ymzuiku/global_toast
 
